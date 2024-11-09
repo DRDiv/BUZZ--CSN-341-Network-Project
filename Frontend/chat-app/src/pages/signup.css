@@ -1,0 +1,121 @@
+/* General Page Style for Signup */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  background: linear-gradient(45deg, #3498db, #2ecc71, #9b59b6, #f39c12);
+  background-size: 400% 400%; /* Smooth background transition */
+  animation: gradient-animation 8s ease infinite;
+  margin: 0; /* Ensure no margin around the container */
+}
+
+.signup-box {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 400px; /* Maximum width for the signup box */
+  width: 100%; /* Ensure the box takes full width up to the max-width */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  color: #fff;
+}
+
+.signup-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.input-group input:focus {
+  border: 1px solid #2ecc71;
+  outline: none;
+}
+
+.signup-btn {
+  padding: 10px;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%; /* Ensure the button takes full width */
+}
+
+.signup-btn:hover {
+  background-color: #27ae60;
+}
+
+.login-link {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ddd;
+}
+
+.login-link a {
+  color: #2ecc71;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Keyframe for Animated Background */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .signup-box {
+    padding: 30px;
+    width: 80%; /* Make the box smaller on mobile */
+  }
+
+  .signup-title {
+    font-size: 28px;
+  }
+
+  .signup-btn {
+    font-size: 16px;
+  }
+}

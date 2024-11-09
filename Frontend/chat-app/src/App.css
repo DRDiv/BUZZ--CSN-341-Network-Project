@@ -1,0 +1,119 @@
+/* App container and global styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f9; /* Light background for the overall page */
+}
+
+/* Heading and paragraph styling */
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2em;
+  color: #2ecc71; /* Green color for primary headings */
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.2em;
+  color: #555; /* Subtle gray color for paragraphs */
+}
+
+/* App component specific styling */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Apply logo spin animation */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Header styling */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px; /* Added padding for spacing */
+  text-align: center;
+}
+
+/* App link styling */
+.App-link {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #2ecc71; /* Green color on hover for links */
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #27ae60; /* Darker green on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 4vmin); /* Increase font size on small screens */
+  }
+
+  .App-logo {
+    height: 30vmin; /* Slightly smaller logo on mobile */
+  }
+
+  .App-link {
+    font-size: 1em; /* Adjust link size on mobile */
+  }
+}
+
+/* Keyframe for logo spin */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

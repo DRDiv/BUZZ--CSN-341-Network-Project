@@ -1,0 +1,96 @@
+/* Animated Background: Moving Gradient */
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(45deg, #3498db, #2ecc71, #9b59b6, #f39c12);
+    background-size: 400% 400%; /* Smooth background transition */
+    animation: gradient-animation 8s ease infinite;  /* Animated gradient */
+    position: relative;
+  }
+  
+  /* Content Style - Dark Semi-Transparent Background with Blur Effect */
+  .about-content {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    backdrop-filter: blur(12px); /* Adding blur effect to the background */
+    text-align: center; /* Center-align text */
+    color: #fff; /* White text color for readability */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  /* Title Style */
+  .about-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* Description Style */
+  .about-description {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ddd; /* Lighter color for description text */
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  /* Section Title Style */
+  .about-section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 30px;
+  }
+  
+  /* Mission and Team Text Style */
+  .about-mission, .about-team {
+    font-size: 18px;
+    font-weight: 400;
+    color: #ddd; /* Lighter color for description text */
+    line-height: 1.6;
+  }
+  
+  /* Team Section Spacing */
+  .about-team {
+    margin-bottom: 40px;
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+    .about-content {
+      padding: 20px;
+    }
+  
+    .about-title {
+      font-size: 28px;
+    }
+  
+    .about-section-title {
+      font-size: 20px;
+    }
+  
+    .about-description, .about-mission, .about-team {
+      font-size: 16px;
+    }
+  }
+  

@@ -1,0 +1,101 @@
+/* General Page Style */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #3498db, #2ecc71, #9b59b6, #f39c12);
+    background-size: 400% 400%; /* Smooth background transition */
+    animation: gradient-animation 8s ease infinite;
+    padding: 20px;
+    flex-direction: column; /* Keep the content vertically aligned */
+    text-align: center;
+  }
+  
+  .content-box {
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1000px; /* Increase width for better card arrangement */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+  }
+  
+  .home-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .home-description {
+    font-size: 18px;
+    color: #ddd;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  /* Cards Section Style */
+  .card-container {
+    display: flex; /* Display cards horizontally */
+    justify-content: space-evenly; /* Space cards evenly across the container */
+    gap: 20px; /* Add space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap to next line on smaller screens */
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for card background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+    color: #fff;
+    width: 30%; /* Adjust width for 3 cards per row */
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+  
+  .card-description {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #ddd; /* Lighter text color */
+    line-height: 1.6;
+  }
+  
+  /* Keyframe for Animated Background */
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+    .card-container {
+      flex-direction: column; /* Stack cards vertically on smaller screens */
+      align-items: center; /* Center align cards */
+    }
+  
+    .card {
+      width: 80%; /* Make cards take up more width on small screens */
+    }
+  }
+
+  .card i {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 15px; /* Add space below the icon */
+  }
+  
