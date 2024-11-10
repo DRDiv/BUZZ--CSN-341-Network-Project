@@ -1,20 +1,35 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 import "./signup.css";
-
 const Signup = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (password === confirmPassword) {
-      // Handle form submission for sign-up (e.g., Firebase or custom logic)
-      console.log("Sign Up attempt:", email, password);
+      try {
+        const response = await fetch('http://localhost:5000/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ username: username, password: password }),
+        });
+  
+        const result = await response.text();
+        navigate("/chat");
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error submitting form');
+      }
     } else {
       alert("Passwords do not match!");
     }
   };
+  
 
   return (
     <div className="signup-container">
@@ -22,12 +37,12 @@ const Signup = () => {
         <h2 className="signup-title">Sign Up</h2>
         <form onSubmit={handleSubmit} className="signup-form">
           <div className="input-group">
-            <label>Email</label>
+            <label>Username</label>
             <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Enter your username"
               required
             />
           </div>
