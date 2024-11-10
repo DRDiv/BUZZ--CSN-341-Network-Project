@@ -9,8 +9,8 @@ const Chat = () => {
   const [newChatroom, setNewChatroom] = useState(""); // To store new chatroom input
 
   // Simulated data for active users and chatrooms
-  const [chatrooms, setChatrooms] = useState(["General", "Tech Talk", "Gaming", "Music"]);
-  const users = ["Alice", "Bob", "Charlie", "David"];
+  const [chatrooms, setChatrooms] = useState([]);
+  const users = ["Nive"];
 
   // Handle sending message
   const handleSendMessage = (e) => {
